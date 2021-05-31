@@ -15,6 +15,23 @@ namespace ClassLibrary
         //private Worker driver;
         //private Client client;
         public bool isVip { get; private set; }     // is our client is Vip or not
+
+        public Worker Worker
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Client Client
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private static int rate = 8;    // static field of the rate for 1 km
         private static int startPrice = 25;     // static field of the startprice for the ride
 
