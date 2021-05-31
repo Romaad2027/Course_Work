@@ -21,7 +21,7 @@ namespace Forms
         public MainMenuForm(string data)
         {
             InitializeComponent();
-            log = data;
+            log = data;     // get login from login Form
             HelloText.Text = $"Hello, {log}";
         }
 
@@ -38,15 +38,15 @@ namespace Forms
                 return;
             }
 
-            client = new Client(log);
-            client.ReadFromDBase();
-            ride = new Ride(client);
+            client = new Client(log);   // Allocate memory to our object
+            client.ReadFromDBase();     
+            ride = new Ride(client);    // Allocate memory to our object
             ride.GetDistanceOfRide();
             ride.CountFare();
 
-            FareLabel.Text = $"Fare: {ride.fare} grivnas";
-            DistanceLabel.Text = $"Distance: {ride.distance}m";
-
+            FareLabel.Text = $"Fare: {ride.fare} grivnas";              // 
+            DistanceLabel.Text = $"Distance: {ride.distance}m";         // give information about the ride after button click
+                                                                        //
             if(ride.isVip)
             {
                 DiscountLabel.Text = "Discount: 5%";
@@ -77,7 +77,7 @@ namespace Forms
             AddressCurr.Text = "";
             AddressToGo.Text = "";
 
-            FareLabel.Text = "Fare:";
+            FareLabel.Text = "Fare:";                       // clear form after the end of the ride
             DistanceLabel.Text = "Distance:";
             DriverLabel.Text = "Driver:";
             CarLabel.Text = "Car:";

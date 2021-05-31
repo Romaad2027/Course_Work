@@ -60,17 +60,17 @@ namespace Forms
 
             try
             {
-                Client client = new Client(NameText.Text);
-                client.checkForAge(Convert.ToInt32(AgeText.Text));
+                Client client = new Client(NameText.Text);  // creating the object of our client
+                client.checkForAge(Convert.ToInt32(AgeText.Text));  // checking for age
             }
-            catch (PersonException)
+            catch (PersonException) // 18 > age || age > 100
             {
                 MessageBox.Show("Wrong age");
                 return;
             }
 
             DBase db = new DBase();
-            MySqlCommand command = new MySqlCommand("INSERT INTO clients (name, login, password, age) VALUES (@name, @login, @password, @age)", db.getConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO clients (name, login, password, age) VALUES (@name, @login, @password, @age)", db.getConnection()); // request to fill the table
 
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = NameText.Text;
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginText.Text;
@@ -78,6 +78,13 @@ namespace Forms
             command.Parameters.Add("@age", MySqlDbType.Int32).Value = Convert.ToInt32(AgeText.Text);
 
             db.OpenConnection();
+
+            bool x = isUserExists(); // check the login
+
+            if (x)
+            {
+                return;
+            }
 
             if(command.ExecuteNonQuery() == 1)
             {
@@ -90,7 +97,7 @@ namespace Forms
             db.CloseConnection();
         }
 
-        public Boolean isUserExists()
+        public Boolean isUserExists() // check if the login is unique
         {
             DBase db = new DBase();
             DataTable table = new DataTable();
@@ -103,7 +110,7 @@ namespace Forms
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if (table.Rows.Count > 0)
+            if (table.Rows.Count > 0) // there is already user with such login
             {
                 MessageBox.Show("This login already exists!");
                 return true;

@@ -32,18 +32,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.SalaryLabel = new System.Windows.Forms.Label();
+            this.RidesLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.RiderLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.TextBox();
             this.CheckButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RiderLabel = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.NameLabel = new System.Windows.Forms.Label();
-            this.RidesLabel = new System.Windows.Forms.Label();
-            this.SalaryLabel = new System.Windows.Forms.Label();
+            this.LogOutLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +70,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.LogOutLabel);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.RiderLabel);
             this.panel2.Controls.Add(this.IdLabel);
@@ -78,6 +80,61 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 450);
             this.panel2.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.SalaryLabel);
+            this.panel3.Controls.Add(this.RidesLabel);
+            this.panel3.Controls.Add(this.NameLabel);
+            this.panel3.Location = new System.Drawing.Point(129, 139);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(444, 188);
+            this.panel3.TabIndex = 7;
+            // 
+            // SalaryLabel
+            // 
+            this.SalaryLabel.AutoSize = true;
+            this.SalaryLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalaryLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.SalaryLabel.Location = new System.Drawing.Point(20, 93);
+            this.SalaryLabel.Name = "SalaryLabel";
+            this.SalaryLabel.Size = new System.Drawing.Size(46, 16);
+            this.SalaryLabel.TabIndex = 2;
+            this.SalaryLabel.Text = "Salary:";
+            // 
+            // RidesLabel
+            // 
+            this.RidesLabel.AutoSize = true;
+            this.RidesLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RidesLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.RidesLabel.Location = new System.Drawing.Point(20, 55);
+            this.RidesLabel.Name = "RidesLabel";
+            this.RidesLabel.Size = new System.Drawing.Size(43, 16);
+            this.RidesLabel.TabIndex = 1;
+            this.RidesLabel.Text = "Rides:";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.NameLabel.Location = new System.Drawing.Point(20, 19);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(46, 16);
+            this.NameLabel.TabIndex = 0;
+            this.NameLabel.Text = "Name:";
+            // 
+            // RiderLabel
+            // 
+            this.RiderLabel.AutoSize = true;
+            this.RiderLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RiderLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RiderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(147)))), ((int)(((byte)(33)))));
+            this.RiderLabel.Location = new System.Drawing.Point(126, 48);
+            this.RiderLabel.Name = "RiderLabel";
+            this.RiderLabel.Size = new System.Drawing.Size(137, 16);
+            this.RiderLabel.TabIndex = 6;
+            this.RiderLabel.Text = "Enter the id of driver";
             // 
             // IdLabel
             // 
@@ -115,60 +172,19 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // RiderLabel
+            // LogOutLabel
             // 
-            this.RiderLabel.AutoSize = true;
-            this.RiderLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.RiderLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RiderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(147)))), ((int)(((byte)(33)))));
-            this.RiderLabel.Location = new System.Drawing.Point(126, 48);
-            this.RiderLabel.Name = "RiderLabel";
-            this.RiderLabel.Size = new System.Drawing.Size(137, 16);
-            this.RiderLabel.TabIndex = 6;
-            this.RiderLabel.Text = "Enter the id of driver";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.SalaryLabel);
-            this.panel3.Controls.Add(this.RidesLabel);
-            this.panel3.Controls.Add(this.NameLabel);
-            this.panel3.Location = new System.Drawing.Point(129, 139);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(444, 188);
-            this.panel3.TabIndex = 7;
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.NameLabel.Location = new System.Drawing.Point(20, 19);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(46, 16);
-            this.NameLabel.TabIndex = 0;
-            this.NameLabel.Text = "Name:";
-            // 
-            // RidesLabel
-            // 
-            this.RidesLabel.AutoSize = true;
-            this.RidesLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RidesLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.RidesLabel.Location = new System.Drawing.Point(20, 55);
-            this.RidesLabel.Name = "RidesLabel";
-            this.RidesLabel.Size = new System.Drawing.Size(43, 16);
-            this.RidesLabel.TabIndex = 1;
-            this.RidesLabel.Text = "Rides:";
-            // 
-            // SalaryLabel
-            // 
-            this.SalaryLabel.AutoSize = true;
-            this.SalaryLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalaryLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.SalaryLabel.Location = new System.Drawing.Point(20, 93);
-            this.SalaryLabel.Name = "SalaryLabel";
-            this.SalaryLabel.Size = new System.Drawing.Size(46, 16);
-            this.SalaryLabel.TabIndex = 2;
-            this.SalaryLabel.Text = "Salary:";
+            this.LogOutLabel.AutoSize = true;
+            this.LogOutLabel.CausesValidation = false;
+            this.LogOutLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LogOutLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LogOutLabel.Location = new System.Drawing.Point(205, 386);
+            this.LogOutLabel.Name = "LogOutLabel";
+            this.LogOutLabel.Size = new System.Drawing.Size(58, 16);
+            this.LogOutLabel.TabIndex = 12;
+            this.LogOutLabel.Text = "Log Out:";
+            this.LogOutLabel.Click += new System.EventHandler(this.LogOutLabel_Click);
             // 
             // Admin
             // 
@@ -183,9 +199,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,5 +218,6 @@
         private System.Windows.Forms.Label SalaryLabel;
         private System.Windows.Forms.Label RidesLabel;
         private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label LogOutLabel;
     }
 }

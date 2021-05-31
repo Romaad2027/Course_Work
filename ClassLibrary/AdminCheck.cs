@@ -8,9 +8,9 @@ using MySql.Data.MySqlClient;
 
 namespace ClassLibrary
 {
-    public class AdminCheck
+    public class AdminCheck : IAdmin
     {
-        public List<int> ListOfId { get; private set; }
+        public List<int> ListOfId { get; private set; } // list of all Id of our drivers
 
         public AdminCheck()
         {
@@ -22,7 +22,7 @@ namespace ClassLibrary
 
             MySqlDataReader reader = command.ExecuteReader();
 
-            while(reader.Read())
+            while(reader.Read())    // while there are rows in our table, we fill our list with the id
             {
                 string str = reader[0].ToString();
                 ListOfId.Add(Convert.ToInt32(str));
@@ -31,17 +31,17 @@ namespace ClassLibrary
             db.CloseConnection();
         }
 
-        public bool isIdExist(string id)
+        public bool isIdExist(string id)    // check if there are id, which admin enter in form
         {
             foreach(var item in id)
             {
-                if(item < '0' || item > '9')
+                if(item < '0' || item > '9') // admin entered not digit
                 {
                     throw new OutOfIdException("Id contains only digits");
                 }
             }
 
-            foreach(var item in ListOfId)
+            foreach(var item in ListOfId)   // admin entered wrong id
             {
                 if(Convert.ToInt32(id) == item)
                 {

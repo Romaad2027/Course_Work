@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public abstract class Person
+    public abstract class Person   
     {
-        public string Name { get; private set; }
-        public int rides { get; protected set; }
+        public string Name { get; private set; }    // Name of the person
+        public int rides { get; protected set; }    // amount of rides for the whole time
 
-        public int Age { get; protected set; }
+        public int Age { get; protected set; }      // Age of the person
 
         //public int AgePropertie
         //{
@@ -29,15 +29,15 @@ namespace ClassLibrary
         //    }
         //}
 
-        public Person()
+        public Person()     // default constructor
         {
 
         }
-        public Person(string _name)
+        public Person(string _name) // constructor with parametrs
         {
             Name = _name;
         }
 
-        public abstract void AmountOfRides();
+        public abstract void AmountOfRides();   // abstracrt method which we will need to override
     }
 }

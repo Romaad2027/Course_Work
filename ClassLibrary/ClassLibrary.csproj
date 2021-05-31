@@ -45,6 +45,8 @@
     <Compile Include="AdminCheck.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="DBase.cs" />
+    <Compile Include="IAdmin.cs" />
+    <Compile Include="IRide.cs" />
     <Compile Include="OutOfIdException.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonException.cs" />

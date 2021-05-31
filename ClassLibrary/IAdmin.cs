@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class OutOfIdException : Exception
+    interface IAdmin
     {
-        public OutOfIdException(string message) : base(message) 
-        { }
+        bool isIdExist(string id);
     }
 }
